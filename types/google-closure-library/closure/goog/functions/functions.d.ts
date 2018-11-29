@@ -34,6 +34,15 @@ declare namespace goog.functions {
     /**
      * A simple function that returns the first argument of whatever is passed
      * into it.
+     * @param {T} opt_returnValue The single value that will be returned.
+     * @return {T} The first argument passed in, or undefined if nothing was passed.
+     * @template T
+     */
+    function identity<T>(retValue: T|null|undefined): retValue is T;
+    
+    /**
+     * A simple function that returns the first argument of whatever is passed
+     * into it.
      * @param {T=} opt_returnValue The single value that will be returned.
      * @param {...*} var_args Optional trailing arguments. These are ignored.
      * @return {T} The first argument passed in, or undefined if nothing was passed.
